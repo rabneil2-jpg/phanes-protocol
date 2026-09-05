@@ -46,11 +46,11 @@ PASS  constitution_curve_formula: PASS
 PASS  constitution_terminal_price_0_12: PASS
 PASS  constitution_full_sale_model: PASS
 PASS  constitution_sha_matches_source: 6c5f96f410cc3c84cf1e9dec8016de7e8c8efe59396e45db25c962c08b20808f
+PASS  import_v08_PHANES_RC10_CoreMatrix.t.sol: PASS
+PASS  import_v08_PHANES_RC10_Launch.t.sol: PASS
 PASS  import_v08_PHANES_RC10_NoBuyerCap.t.sol: PASS
 PASS  import_v08_PHANES_RC10_RecoverySafety.t.sol: PASS
-PASS  import_v08_PHANES_RC10_CoreMatrix.t.sol: PASS
 PASS  import_v08_PHANES_RC10_TradingAfterKhaos.t.sol: PASS
-PASS  import_v08_PHANES_RC10_Launch.t.sol: PASS
 PASS  test_count_72: count=72
 PASS  pre_gate_transfer_lock_test: PASS
 PASS  exact_gate_full_transfer_test: PASS

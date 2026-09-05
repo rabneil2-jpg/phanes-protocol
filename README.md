@@ -2,7 +2,7 @@
 
 ## RC10 v0.8 — pre-mainnet production candidate
 
-**Status:** Experimental · Not audited · Not deployed · Not available for purchase
+**Status:** Experimental · Not audited · Gate green · Ready for founder-signed Base Mainnet deployment · Not deployed · Not available for purchase
 
 This repository describes the PHANES RC10 v0.8 candidate for Base. It is a source, test and informational-website handoff; it is not a deployment claim. RC10 v0.8 supersedes the prior RC10 v0.7 package only for the terminal primary-issuance curve. RC7, RC9 and older RC10 rules, addresses and launch claims are historical and unsupported.
 
@@ -85,6 +85,6 @@ The public Buy UI remains withheld until one canonical RC10 v0.8 production depl
 
 ## Testing status
 
-The handoff includes deterministic source/economic checks, a behaviour model and a fixed-point curve stress model. The repository also contains **72 prepared Solidity/Foundry test functions** with fuzz/invariant settings in `foundry.toml`.
+The handoff includes deterministic source/economic checks, a behaviour model, a fixed-point curve stress model and fresh Solidity/Foundry evidence. The supplied gate record reports **72/72 Solidity/Foundry tests passing**, a 14,681-byte runtime and the full raw logs under `evidence/fresh_v08_evm/`.
 
-Fresh Forge/EVM execution must still be run in a configured Foundry environment before Sepolia or mainnet. Model/static results do not authorize deployment. See `docs/TEST_HANDOFF_V08.md` for the exact handoff commands.
+The model/static checks can be rerun locally with the commands in `docs/TEST_HANDOFF_V08.md`; an independent local rerun is recommended when Foundry is available. The evidence does not mean the contract is audited, deployed or available for purchase.

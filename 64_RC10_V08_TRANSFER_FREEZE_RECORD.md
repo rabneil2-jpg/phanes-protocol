@@ -20,4 +20,4 @@
 - Static/model validation: **62/62 PASS**.
 - Fixed-point curve stress model: **600,000 randomized cases PASS**.
 - Forge test definitions: **72 prepared**.
-- Fresh v0.8 Forge/EVM execution: **PENDING — mandatory before Sepolia**.
+- Fresh v0.8 Forge/EVM execution: **INCLUDED in `evidence/fresh_v08_evm/` and summarized in `evidence/TEST_STATUS_V08.md`; independent local rerun recommended**.

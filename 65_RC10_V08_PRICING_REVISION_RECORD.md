@@ -19,4 +19,4 @@ The modelled cumulative cost at a complete public sellout is **860,823,333,333 m
 
 This revision changes the primary-issuance quote math and the related public documentation/tests. It does not change the fixed 21m supply, allocation amounts, epoch timestamps, 48-hour KHAOS transfer gate, permanent transferability after that gate, founder tranche schedule or separate protocol-liquidity vault.
 
-Fresh Solidity compilation, Forge/EVM tests, bytecode-size review and release-manifest approval remain mandatory before any Sepolia or mainnet deployment.
+The gate-green handoff includes fresh Solidity compilation, Forge/EVM tests and bytecode-size evidence under `evidence/fresh_v08_evm/`. Release-manifest approval remains a separate post-deployment requirement; the exact final fingerprint is calculated from the completed manifest containing the deployed mainnet graph.

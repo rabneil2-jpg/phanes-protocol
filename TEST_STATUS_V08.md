@@ -1,4 +1,4 @@
-# RC10 v0.8 test status — 5 September 2026
+# RC10 v0.8 test status — 5 September 2026 (fresh gate)
 
 ## Current candidate
 - Source: `src/PHANES_RC10_v0_8.sol`
@@ -8,26 +8,36 @@
 - Optimizer: **enabled / 200 runs**
 - EVM target: **Cancun**
 
-## Completed in this environment
-- **62/62** static/source/economic wiring checks PASS.
-- **37/37** executed behaviour/economic model checks PASS.
-- **100,000** randomized invariant cases PASS.
-- **72** Solidity/Foundry test functions are present and wired to the v0.8 source.
-- Curve stress model: **600,000** deterministic randomized cases PASS across monotonic/range, telescoping-cost and affordable-quote checks.
-- New regression coverage includes: exact 48-hour KHAOS transfer gate, permanent transferability after the gate, later-epoch immediate transferability, no early public-finalization side effect, founder gate alignment, no old 150k cap, and separation of holder transfers from the 2m protocol-liquidity allocation.
+## Fresh gate results (this package)
 
-## Historical baseline only
-RC10 v0.6 previously returned **67/67 Foundry PASS** before the transferability redesign. That is useful regression history but is **not** v0.8 EVM proof.
+| Check | Result |
+|-------|--------|
+| Static / source / economic wiring | **62 / 62 PASS** |
+| Behaviour / economic model | **37 / 37 PASS** (+ 100 000 randomized invariant cases) |
+| Curve stress (monotonic + telescoping + affordable-quote) | **PASS** (600 000 cases) |
+| Solidity / Foundry unit + fuzz tests | **72 / 72 PASS** |
+| PHANES runtime size | **14 681 B** (margin 9 895 B under 24 576 B EIP-170 limit) |
+| Foundry version | forge 1.8.1 (982849d314 · 2026-08-28) |
 
-## Mandatory next proof
-Fresh Forge/Solidity EVM execution has **not** been run for v0.8 in this container because Forge/solc 0.8.36 is unavailable here and the runtime cannot fetch compiler binaries.
+Raw logs are in:
+- `evidence/fresh_v08_static.txt`
+- `evidence/fresh_v08_model.txt`
+- `evidence/fresh_v08_stress.txt`
+- `evidence/fresh_v08_evm/FORGE_TEST_V08.txt`
+- `evidence/fresh_v08_evm/FORGE_BUILD_SIZES.txt`
+- `evidence/fresh_v08_evm/FOUNDRY_VERSION.txt`
+- `evidence/fresh_v08_evm/SOURCE_SHA256.txt`
 
-Before Base Sepolia or mainnet:
-1. `forge clean && forge build`
-2. `forge test -vvv`
-3. confirm all 72 tests pass
-4. run the configured fuzz/invariant suite
-5. record bytecode/initcode sizes
-6. save raw output and tool versions into `evidence/`
+## One test-file fix only (source untouched)
 
-No v0.8 deployment is authorised merely by the model/static results.
+`test/PHANES_RC10_TradingAfterKhaos.t.sol` contained the classic Foundry footgun:
+
+```solidity
+vm.prank(buyer); phn.transfer(recipient, phn.balanceOf(buyer) / 2);
+```
+
+The nested `balanceOf` consumed the prank, so the transfer executed from the test contract. The amount is now snapshotted first. **The production Solidity source hash is identical to the previous handoff.**
+
+## Status
+
+The release gate is green. Deployment of the guarded mainnet wrapper is now the next founder action. See `DEPLOY_MAINNET.md`.

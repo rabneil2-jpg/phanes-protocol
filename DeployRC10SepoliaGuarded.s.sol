@@ -14,8 +14,8 @@ contract DeployRC10SepoliaGuarded {
     uint256 constant BASE_SEPOLIA_CHAIN_ID = 84532;
     address constant USDC = 0x036CbD53842c5426634e7929541eC2318f3dCF7e;
     address constant FOUNDER = 0xBE6D348d43083FC07BF4E453683AafF4da0C6a32;
-    address constant R1 = 0x64333a78f9b03C4e0bd2F0496ef3fF6c671211F8;
-    address constant R2 = 0x8Abf9E6B52251C35E58C97daB6bb177A8876D471;
+    address constant R1 = 0xA4ac48B8eb1e639930Cc0ce3ACcAB5605D5DFe14;
+    address constant R2 = 0x6Fff69C4d3Bf4590e2518ff3CdF07De567b8F4Dc;
     uint64 constant REWARDS_EXPIRY = 2_100_000_000;
 
     event DeploymentGraph(address core, address liquidity, address reserve, address founderVault, address launch, address rewards);

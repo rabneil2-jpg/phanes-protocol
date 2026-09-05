@@ -205,7 +205,10 @@ contract PHANESRC10TradingAfterKhaosTest is Test {
 
         _buyKhaos(buyer);
         vm.warp(TRADING_START);
-        vm.prank(buyer); phn.transfer(recipient, phn.balanceOf(buyer) / 2);
+        // Snapshot amount first so vm.prank is not consumed by nested balanceOf.
+        uint256 half = phn.balanceOf(buyer) / 2;
+        vm.prank(buyer);
+        phn.transfer(recipient, half);
 
         assertEq(phn.balanceOf(address(phn.liquidityVault())), liquidityBefore);
     }

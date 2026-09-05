@@ -1,0 +1,101 @@
+Compiling 1 files with Solc 0.8.36
+Solc 0.8.36 finished in 942.34ms
+Compiler run successful with warnings:
+Warning (2018): Function state mutability can be restricted to view
+  --> test/PHANES_RC10_TradingAfterKhaos.t.sol:65:5:
+   |
+65 |     function testTradingGateIdentityIsExactKhaosPlus48Hours() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/PHANES_RC10_NoBuyerCap.t.sol:PHANESRC10NoBuyerCapTest
+[PASS] testGlobalEnvelopeStillCapsOpeningSupply() (gas: 61585)
+[PASS] testNo150kCumulativeWalletStageCeiling() (gas: 1081490)
+[PASS] testNo150kSinglePurchaseCeiling() (gas: 30858)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 5.42ms (4.21ms CPU time)
+
+Ran 7 tests for test/PHANES_RC10_RecoverySafety.t.sol:PHANESRecoverySafetyPatchTest
+[PASS] testAbortCannotExecuteAtOrAfterKhaos() (gas: 152473)
+[PASS] testCannotArmWithoutAllThreeManifestApprovals() (gas: 149046)
+[PASS] testDeploymentStartsUnarmed() (gas: 15165)
+[PASS] testPermissionlessArmAfterAllThreeApprovals() (gas: 209663)
+[PASS] testQuoteZeroWhileUnarmed() (gas: 16135)
+[PASS] testTwoOfThreeCanPermanentlyAbortBeforeKhaos() (gas: 214435)
+[PASS] testUnarmedAtKhaosIsDeadState() (gas: 24135)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 1.29ms (463.01µs CPU time)
+
+Ran 26 tests for test/PHANES_RC10_CoreMatrix.t.sol:PHANESRC10CoreMatrixTest
+[PASS] testCurveEndpoints() (gas: 18481)
+[PASS] testDuplicateRewardClaimIdRejected() (gas: 427444)
+[PASS] testEOAPaymentTokenRejectedAtConstruction() (gas: 10461)
+[PASS] testFinalizationMovesAllUnsoldPublicToReserveWithoutBurn() (gas: 204275)
+[PASS] testFounderCannotReleaseBeforeKhaos() (gas: 38320)
+[PASS] testFounderFirstTrancheExactly200kAtKhaos() (gas: 102394)
+[PASS] testFounderFiveEpochTranchesTotal1m() (gas: 337924)
+[PASS] testFuzzCostIsMonotonic(uint256,uint256) (runs: 10000, μ: 20730, ~: 20813)
+[PASS] testFuzzCostPathTelescopes(uint256,uint256,uint256) (runs: 10000, μ: 45282, ~: 45422)
+[PASS] testGenesisExactly21m() (gas: 70473)
+[PASS] testKhaosEligibilityAt24HoursIs60Percent() (gas: 9981)
+[PASS] testKhaosEligibilityAt48HoursIs100Percent() (gas: 9682)
+[PASS] testKhaosOpeningEligibilityIs20Percent() (gas: 19036)
+[PASS] testLargeNonTechnicalNeedsBothReviewers() (gas: 607191)
+[PASS] testMoreInventoryBecomesPurchasableAsGlobalEnvelopeStreams() (gas: 290043)
+[PASS] testOionUsesLeftoversAndNoPriceReset() (gas: 1253524)
+[PASS] testPriceAdvancesGloballyAcrossPurchases() (gas: 1754509)
+[PASS] testReserveHasNo2040Cliff() (gas: 184619)
+[PASS] testReserveReaches50PercentAt2045() (gas: 276368)
+[PASS] testRewardsSunsetMovesRewardsPlusUnusedLaunchToLiquidity() (gas: 158649)
+[PASS] testSingleWalletCanAcquireEntireCurrentlyEligibleOpeningInventory() (gas: 319092)
+[PASS] testStaleKhaosTransactionCannotCrossIntoChronos() (gas: 114427)
+[PASS] testTechnicalRewardNeedsReviewerOne() (gas: 574658)
+[PASS] testTradingStartUnlocksFullBalanceWithoutFinalizingPrimaryIssuance() (gas: 371009)
+[PASS] testTransfersAndApprovalsLockedBeforeFirstPublicUnlock() (gas: 63477)
+[PASS] testUnsoldKhaosDoesNotInflateChronos() (gas: 296301)
+Suite result: ok. 26 passed; 0 failed; 0 skipped; finished in 1.50s (1.50s CPU time)
+
+Ran 3 tests for test/PHANES_RC10_CoreMatrix.t.sol:PHANESRC10PaymentAdversarialTest
+[PASS] testFalseReturnPaymentRejected() (gas: 730935)
+[PASS] testFeeOnTransferPaymentRejectedByBalanceDelta() (gas: 858687)
+[PASS] testReentrantPaymentCannotNestedBuy() (gas: 1044232)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.20ms (2.01ms CPU time)
+
+Ran 18 tests for test/PHANES_RC10_TradingAfterKhaos.t.sol:PHANESRC10TradingAfterKhaosTest
+[PASS] testApprovalLockedOneSecondBeforeTradingStart() (gas: 298896)
+[PASS] testApproveAndTransferFromWorkAtExactTradingStart() (gas: 386057)
+[PASS] testChronosPurchaseIsImmediatelyTransferable() (gas: 310375)
+[PASS] testFinalSealDoesNotRelockHolders() (gas: 456558)
+[PASS] testFounderKhaosTrancheSharesTheSame48HourTransferGate() (gas: 189152)
+[PASS] testFullBalanceTransferableAtExactTradingStart() (gas: 354736)
+[PASS] testFuzzFullBalanceTransferableAfterGate(uint96) (runs: 10000, μ: 351111, ~: 351269)
+[PASS] testIncomingTokensAfterGateAreNeverRelocked() (gas: 391146)
+[PASS] testKhaosFairAccessEnvelopeStillCompletesAtTradingStart() (gas: 28970)
+[PASS] testNextTransferMilestoneIsOnlyThe48HourGate() (gas: 33621)
+[PASS] testOionPurchaseIsImmediatelyTransferable() (gas: 328338)
+[PASS] testPreGateScheduledAllocationBecomesFullyVestedAtGate() (gas: 291563)
+[PASS] testPrimaryBuyAfterTradingStartIsImmediatelyTransferable() (gas: 308951)
+[PASS] testProtocolLiquidityAllocationDoesNotAutoDumpAtTradingOpen() (gas: 357816)
+[PASS] testSymbolicEmergenceCreatesNoHolderUnlockCliff() (gas: 314757)
+[PASS] testTradingGateIdentityIsExactKhaosPlus48Hours() (gas: 27357)
+[PASS] testTradingOpeningDoesNotFinalizePrimaryIssuance() (gas: 349422)
+[PASS] testTransferLockedOneSecondBeforeTradingStart() (gas: 314476)
+Suite result: ok. 18 passed; 0 failed; 0 skipped; finished in 2.61s (2.61s CPU time)
+
+Ran 15 tests for test/PHANES_RC10_Launch.t.sol:PHANESRC10LaunchTest
+[PASS] testCancelledAllocationCannotBeClaimed() (gas: 352151)
+[PASS] testCancelledDealRestoresCapacityButMovesNoPHN() (gas: 646514)
+[PASS] testClaimAtExactKhaosFails() (gas: 293738)
+[PASS] testClaimAtOneSecondBeforeKhaosWorks() (gas: 394090)
+[PASS] testEmptyAgreementOrEvidenceRejected() (gas: 66940)
+[PASS] testFirstKhaosBuyAutomaticallySweepsUnusedLaunchToRewards() (gas: 1024682)
+[PASS] testFuzzLaunchRewardsConservation(uint128) (runs: 10000, μ: 458372, ~: 458109)
+[PASS] testGenesisIsExactly21mWithRetainedAllocationSplit() (gas: 68111)
+[PASS] testLaunchAllocationNeedsBothReviewers() (gas: 424727)
+[PASS] testPartialClaimMeansOnlyRemainderReturnsToRewards() (gas: 477521)
+[PASS] testPartnerStillCannotTransferBefore48HourTradingStart() (gas: 477319)
+[PASS] testPrimaryCannotAllocateToSelfOrReviewers() (gas: 98643)
+[PASS] testRewardsSunsetForcesLaunchSweepIfNobodyDidItAtKhaos() (gas: 143099)
+[PASS] testTotalLaunchClaimsCannotExceed250k() (gas: 420422)
+[PASS] testUnclaimedReturnsToRewardsAtExactKhaos() (gas: 369417)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 1.52s (1.52s CPU time)
+
+Ran 6 test suites in 3.03s (5.65s CPU time): 72 tests passed, 0 failed, 0 skipped (72 total tests)

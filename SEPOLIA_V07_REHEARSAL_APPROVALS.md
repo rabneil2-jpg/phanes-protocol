@@ -19,7 +19,9 @@ Each reviewer must use the wallet whose address is listed above. The founder key
 
 ## Reviewer1 and Reviewer2
 
-On Base Sepolia, open the verified core contract and write:
+The v0.7 Sepolia core is deployed, but its BaseScan source is **not currently verified**, so the BaseScan Write Contract interface is not available. This rehearsal is optional and deferred; do not spend production time or funds on it.
+
+If the source is verified later, the approval call is:
 
 ```text
 approveReleaseManifest(
