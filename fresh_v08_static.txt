@@ -1,0 +1,68 @@
+PHANES RC10 v0.8 STATIC / MODEL VALIDATION
+====================================================
+PASS  lexical_parentheses_balanced: final depth=0
+PASS  lexical_braces_balanced: final depth=0
+PASS  lexical_brackets_balanced: final depth=0
+PASS  trading_start_is_exactly_khaos_plus_48h: 172800
+PASS  source_constant_KHAOS_START: uint64 public constant KHAOS_START = 1_797_886_200
+PASS  source_constant_TRANSFER_RELEASE_START: uint64 public constant TRANSFER_RELEASE_START = 1_798_059_000
+PASS  source_constant_SECONDARY_TRADING_START: uint64 public constant SECONDARY_TRADING_START = TRANSFER_RELEASE_START
+PASS  source_constant_FULL_TRANSFERABILITY_TIME: uint64 public constant FULL_TRANSFERABILITY_TIME = TRANSFER_RELEASE_START
+PASS  source_constant_FINAL_SEAL_START: uint64 public constant FINAL_SEAL_START = OION_CLOSE
+PASS  source_constant_EMERGENCE_TIME: uint64 public constant EMERGENCE_TIME = 1_853_268_600
+PASS  genesis_allocations_sum_21m: {'publicIssuance': 17000000, 'protocolLiquidity': 2000000, 'founder': 1000000, 'launchEnablement': 250000, 'securityAndEcosystemRewards': 750000}
+PASS  founder_5x200k_equals_1m: PASS
+PASS  founder_release_1_matches_epoch: 1_797_886_200
+PASS  founder_release_2_matches_epoch: 1_808_427_000
+PASS  founder_release_3_matches_epoch: 1_819_054_200
+PASS  founder_release_4_matches_epoch: 1_829_508_600
+PASS  founder_release_5_matches_epoch: 1_840_049_400
+PASS  founder_tranche_is_200k: PASS
+PASS  no_old_transfer_milestones: PASS
+PASS  no_transfer_releasing_state: PASS
+PASS  final_seal_state_present: PASS
+PASS  no_150k_public_cap: PASS
+PASS  binary_transfer_unlock_rule: PASS
+PASS  binary_transfer_bps_rule: PASS
+PASS  full_balance_transferable_after_gate: PASS
+PASS  finalization_only_after_oion_close_in_transfer_interface: count=3
+PASS  no_unconditional_finalize_in_transfer_interface: PASS
+PASS  final_seal_uses_symbolic_emergence_not_transfer_gate: PASS
+PASS  final_seal_next_timestamp_symbolic_emergence: PASS
+PASS  liquidity_vault_has_no_withdraw_function: PASS
+PASS  liquidity_vault_has_no_rescue_function: PASS
+PASS  liquidity_vault_has_no_arbitrary_call_function: PASS
+PASS  no_auto_dex_adapter_in_candidate: PASS
+PASS  constitution_marks_liquidity_separate: PASS
+PASS  khaos_open_20pct: PASS
+PASS  khaos_24h_60pct: PASS
+PASS  khaos_48h_100pct: PASS
+PASS  curve_start_0_01: PASS
+PASS  curve_end_0_12: 0.12000000000000001
+PASS  source_curve_price_a: PASS
+PASS  source_curve_price_b: PASS
+PASS  source_curve_price_c: PASS
+PASS  constitution_curve_formula: PASS
+PASS  constitution_terminal_price_0_12: PASS
+PASS  constitution_full_sale_model: PASS
+PASS  constitution_sha_matches_source: 6c5f96f410cc3c84cf1e9dec8016de7e8c8efe59396e45db25c962c08b20808f
+PASS  import_v08_PHANES_RC10_NoBuyerCap.t.sol: PASS
+PASS  import_v08_PHANES_RC10_RecoverySafety.t.sol: PASS
+PASS  import_v08_PHANES_RC10_CoreMatrix.t.sol: PASS
+PASS  import_v08_PHANES_RC10_TradingAfterKhaos.t.sol: PASS
+PASS  import_v08_PHANES_RC10_Launch.t.sol: PASS
+PASS  test_count_72: count=72
+PASS  pre_gate_transfer_lock_test: PASS
+PASS  exact_gate_full_transfer_test: PASS
+PASS  no_early_finalize_regression_test: PASS
+PASS  later_epoch_transfer_test: PASS
+PASS  oion_transfer_test: PASS
+PASS  final_seal_no_relock_test: PASS
+PASS  emergence_no_cliff_test: PASS
+PASS  founder_gate_test: PASS
+PASS  liquidity_separation_test: PASS
+PASS  guarded_deploy_scripts_point_to_v08: PASS
+
+TOTAL PASS: 62
+NOTE: This validation checks source structure, constants, economics, timestamp/model invariants and test-suite wiring.
+NOTE: It is NOT a substitute for Solidity compilation or Forge/EVM execution.

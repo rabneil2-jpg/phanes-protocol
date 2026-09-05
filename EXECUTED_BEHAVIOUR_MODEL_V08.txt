@@ -1,0 +1,43 @@
+PHANES RC10 v0.8 EXECUTED BEHAVIOUR / ECONOMIC MODEL
+==============================================================
+PASS  trading_exactly_48h_after_khaos: PASS
+PASS  transfer_locked_1s_before: PASS
+PASS  transfer_full_at_boundary: PASS
+PASS  transfer_never_relocks: PASS
+PASS  khaos_opening_20pct: PASS
+PASS  khaos_halfway_60pct: PASS
+PASS  khaos_48h_100pct: PASS
+PASS  epoch_0_opening_20pct: PASS
+PASS  epoch_0_48h_full: PASS
+PASS  epoch_0_eligibility_monotonic: PASS
+PASS  epoch_1_opening_20pct: PASS
+PASS  epoch_1_48h_full: PASS
+PASS  epoch_1_eligibility_monotonic: PASS
+PASS  epoch_2_opening_20pct: PASS
+PASS  epoch_2_48h_full: PASS
+PASS  epoch_2_eligibility_monotonic: PASS
+PASS  epoch_3_opening_20pct: PASS
+PASS  epoch_3_48h_full: PASS
+PASS  epoch_3_eligibility_monotonic: PASS
+PASS  founder_release_1_adds_200k: 0->200000
+PASS  founder_release_2_adds_200k: 200000->400000
+PASS  founder_release_3_adds_200k: 400000->600000
+PASS  founder_release_4_adds_200k: 600000->800000
+PASS  founder_release_5_adds_200k: 800000->1000000
+PASS  founder_total_1m: PASS
+PASS  founder_pre_khaos_zero: PASS
+PASS  founder_khaos_wallet_still_transfer_locked: PASS
+PASS  founder_khaos_tranche_transferable_after_gate: PASS
+PASS  curve_start_0_01: PASS
+PASS  curve_end_0_12: PASS
+PASS  curve_monotonic_10001_points: PASS
+PASS  curve_positive_everywhere: PASS
+PASS  randomized_invariants_100000_cases: PASS
+PASS  no_old_150k_cap_amount_150001: PASS
+PASS  no_old_150k_cap_amount_200000: PASS
+PASS  no_old_150k_cap_amount_500000: PASS
+PASS  no_old_150k_cap_amount_1000000: PASS
+
+TOTAL PASS: 37
+RANDOMIZED INVARIANT CASES: 100000
+NOTE: Executed Python model validation; not Solidity bytecode/EVM execution.

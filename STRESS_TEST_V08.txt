@@ -1,0 +1,16 @@
+PHANES RC10 v0.8 FIXED-POINT CURVE STRESS MODEL
+====================================================
+PASS  price_at_zero_is_0_01: PASS
+PASS  price_at_full_is_0_12: PASS
+PASS  full_sale_cost_is_860823_333333_usdc: PASS
+PASS  price_is_bounded_by_terminal: PASS
+PASS  curve_intermediates_fit_uint256: PASS
+PASS  random_price_monotonic_and_bounded: 250000 sorted cases
+PASS  random_cost_nonnegative_and_telescoping: 250000 triplets
+PASS  random_affordable_quotes_are_maximal: 100000 budget/request pairs
+
+TOTAL PASS: 8
+RANDOM MONOTONIC/RANGE CASES: 250000
+RANDOM TELESCOPING COST CASES: 250000
+RANDOM AFFORDABLE-QUOTE CASES: 100000
+NOTE: Python model only; fresh Solidity/Forge/EVM execution remains mandatory.

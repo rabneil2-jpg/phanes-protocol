@@ -1,0 +1,99 @@
+{
+  "name": "PHANES",
+  "version": "RC10-v0.8",
+  "status": "PRE-MAINNET_PRODUCTION_CANDIDATE_NOT_AUDITED_NOT_DEPLOYED",
+  "network": "Base",
+  "token": {
+    "symbol": "PHN",
+    "decimals": 4,
+    "maxSupply": 21000000
+  },
+  "allocations": {
+    "publicIssuance": 17000000,
+    "protocolLiquidity": 2000000,
+    "founder": 1000000,
+    "launchEnablement": 250000,
+    "securityAndEcosystemRewards": 750000
+  },
+  "founderRelease": {
+    "tranche": 200000,
+    "stages": [
+      "KHAOS",
+      "CHRONOS",
+      "ANANKE",
+      "AITHER",
+      "OION"
+    ]
+  },
+  "epochs": {
+    "KHAOS": {
+      "unix": 1797886200,
+      "utc": "2026-12-21T20:50:00Z",
+      "allocation": 5000000,
+      "openingBps": 2000,
+      "envelopeHours": 48
+    },
+    "CHRONOS": {
+      "unix": 1808427000,
+      "utc": "2027-04-22T20:50:00Z",
+      "allocation": 4500000
+    },
+    "ANANKE": {
+      "unix": 1819054200,
+      "utc": "2027-08-23T20:50:00Z",
+      "allocation": 4000000
+    },
+    "AITHER": {
+      "unix": 1829508600,
+      "utc": "2027-12-22T20:50:00Z",
+      "allocation": 3500000
+    },
+    "OION": {
+      "unix": 1840049400,
+      "utc": "2028-04-22T20:50:00Z",
+      "allocation": "unsold normal-epoch rollover"
+    },
+    "OION_CLOSE": {
+      "unix": 1843714740,
+      "utc": "2028-06-04T06:59:00Z"
+    },
+    "PHANES_SYMBOLIC_EMERGENCE": {
+      "unix": 1853268600,
+      "utc": "2028-09-22T20:50:00Z",
+      "holderUnlockEffect": "none"
+    }
+  },
+  "buyerCaps": {
+    "perTransaction": null,
+    "perWallet": null
+  },
+  "pricing": {
+    "formula": "P(x)=0.01+0.023820x+0.086180x^2",
+    "x": "cumulative public PHN acquired / 17,000,000",
+    "resetsBetweenEpochs": false,
+    "initialPriceUsd": 0.01,
+    "terminalPriceUsd": 0.12,
+    "modeledGrossAtFullPublicSaleUsd": 860823.333333
+  },
+  "secondaryTransferability": {
+    "opensUnix": 1798059000,
+    "opensUtc": "2026-12-23T20:50:00Z",
+    "rule": "PHN transfer/approve/transferFrom are locked only for the first 48 hours of KHAOS, then become fully and permanently available.",
+    "relocks": false,
+    "laterEpochPurchasesImmediatelyTransferable": true,
+    "publicTransferCliff2028": false,
+    "publicTransferCliff2030": false
+  },
+  "protocolLiquidity": {
+    "genesisAllocation": 2000000,
+    "separateFromTransferability": true,
+    "automaticDexDumpAtSecondaryTransferOpen": false,
+    "currentCandidateAdapterStatus": "NOT_IMPLEMENTED_SEPARATE_RELEASE_GATE",
+    "note": "Secondary transferability does not itself deploy the 2m protocol-liquidity allocation to a DEX."
+  },
+  "releaseSafety": {
+    "threeManifestApprovalsRequired": true,
+    "armBeforeKhaos": true,
+    "preKhaosTwoOfThreeAbort": true
+  }
+}

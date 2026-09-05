@@ -1,0 +1,31 @@
+{
+  "manifest_version": "PHANES-RC10-v0.8-release-manifest-1",
+  "network": "FILL_AFTER_DEPLOY",
+  "chain_id": "FILL_AFTER_DEPLOY",
+  "core": "FILL_AFTER_DEPLOY",
+  "liquidity_vault": "FILL_AFTER_DEPLOY",
+  "reserve_vault": "FILL_AFTER_DEPLOY",
+  "founder_vault": "FILL_AFTER_DEPLOY",
+  "launch_enablement_vault": "FILL_AFTER_DEPLOY",
+  "rewards_vault": "FILL_AFTER_DEPLOY",
+  "payment_token": "FILL_AFTER_DEPLOY",
+  "founder": "0xBE6D348d43083FC07BF4E453683AafF4da0C6a32",
+  "reviewer_one": "0x64333a78f9b03C4e0bd2F0496ef3fF6c671211F8",
+  "reviewer_two": "0x8Abf9E6B52251C35E58C97daB6bb177A8876D471",
+  "rewards_expiry": 2100000000,
+  "source_sha256": "70e342e76d553400ffc093c9dba69eda5ff6ad2fe6dc5828c1bd728ba53289be",
+  "constitution_sha256_onchain": "6c5f96f410cc3c84cf1e9dec8016de7e8c8efe59396e45db25c962c08b20808f",
+  "khaos_utc": "2026-12-21T20:50:00Z",
+  "secondary_transferability_utc": "2026-12-23T20:50:00Z",
+  "founder_release_phn": {
+    "KHAOS": 200000,
+    "CHRONOS": 200000,
+    "ANANKE": 200000,
+    "AITHER": 200000,
+    "OION": 200000
+  },
+  "source_verified": false,
+  "deployment_tx": "FILL_AFTER_DEPLOY",
+  "core_runtime_codehash": "FILL_AFTER_DEPLOY",
+  "notes": "Hash only after every FILL_AFTER_DEPLOY field has been replaced and source/runtime verification is complete. All three release signers must approve the exact same final 32-byte manifest fingerprint before armLaunch()."
+}
